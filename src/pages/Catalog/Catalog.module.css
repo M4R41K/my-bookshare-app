@@ -1,0 +1,20 @@
+.catalog {
+  display: flex;
+  gap: 2rem;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.searchBar {
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
