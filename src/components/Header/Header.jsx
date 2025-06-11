@@ -1,16 +1,20 @@
+import React from 'react';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
   return (
     <header className={styles.header}>
-      <nav>
-        <Link to="/">Главная</Link>
+      <div className={styles.logo}>
+        <Link to="/">BookShare</Link>
+      </div>
+      <nav className={styles.nav}>
         <Link to="/catalog">Каталог</Link>
         <Link to="/profile">Профиль</Link>
+        <Link to="/add-book">Добавить книгу</Link>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

@@ -1,45 +1,149 @@
+.bookPage {
+  padding: 2rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
 .bookContainer {
   display: flex;
-  gap: 3rem;
-  background: white;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.cover {
+.bookCover {
   width: 300px;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: #555;
+  flex-shrink: 0;
 }
 
-.details {
-  flex: 1;
+.bookDetails {
+  flex-grow: 1;
 }
 
-.bookTitle {
+.bookDetails h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.author {
-  font-size: 1.2rem;
-  color: #7f8c8d;
+.bookDetails h2 {
+  font-size: 1.5rem;
+  color: #666;
   margin-bottom: 1.5rem;
 }
 
+.meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #777;
+}
+
+.description {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.rentForm {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.rentForm h3 {
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  text-align: right;
+}
+
 .rentButton {
-  background: #3498db;
+  background-color: #3498db;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  width: 100%;
   border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 .rentButton:hover {
-  background: #2980b9;
+  background-color: #2980b9;
+}
+
+.rentButton:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.successMessage h3 {
+  margin-bottom: 1rem;
+  color: #155724;
+}
+@media (max-width: 768px) {
+  .bookContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .bookCover {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .rentForm {
+    padding: 1rem;
+  }
+}
+/* Добавим в конец файла */
+.bookImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
